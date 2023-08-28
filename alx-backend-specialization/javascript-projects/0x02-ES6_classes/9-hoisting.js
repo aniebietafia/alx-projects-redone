@@ -7,45 +7,15 @@ export class HolbertonClass {
   get year() {
     return this._year;
   }
+  set year(newYear) {
+    this._year = newYear;
+  }
 
   get location() {
     return this._location;
   }
-
-  get fullDescription() {
-    return `${this._year} ${this._location}`;
-  }
-
-  static createClass(year, location) {
-    return new HolbertonClass(year, location);
-  }
-
-  static logoPath() {
-    return "https://assets.holbertonschool.com/media/holberton-logo.png";
-  }
-
-  static welcomeMessage() {
-    return "Welcome to the Holberton School";
-  }
-
-  static easterEgg() {
-    return "C is fun";
-  }
-
-  static listOfClassrooms() {
-    return ["San Francisco", "Bogota", "Cali"];
-  }
-
-  static isHolbertonClass(obj) {
-    return obj instanceof HolbertonClass;
-  }
-
-  static isClassroom(obj) {
-    return obj instanceof Classroom;
-  }
-
-  static isStudentHolberton(obj) {
-    return obj instanceof StudentHolberton;
+  set location(newLocation) {
+    this._location = newLocation;
   }
 }
 
@@ -53,7 +23,7 @@ const class2019 = new HolbertonClass(2019, "San Francisco");
 const class2020 = new HolbertonClass(2020, "San Francisco");
 
 export class StudentHolberton {
-  constructor(firstName, lastName, holbertonClass) {
+  constructor(firstName, lastName) {
     this._firstName = firstName;
     this._lastName = lastName;
     this._holbertonClass = holbertonClass;
@@ -62,41 +32,21 @@ export class StudentHolberton {
   get fullName() {
     return `${this._firstName} ${this._lastName}`;
   }
+  set fullName(newFullName) {
+    const [firstName, lastName] = newFullName.split(" ");
+    this._firstName = firstName;
+    this._lastName = lastName;
+  }
 
   get holbertonClass() {
-    return this._holbertonClass;
+    return this.holbertonClass;
+  }
+  set holbertonClass(newHolbertonClass) {
+    this._holbertonClass = newHolbertonClass;
   }
 
   get fullStudentDescription() {
-    return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
-  }
-
-  static isStudentHolberton(obj) {
-    return obj instanceof StudentHolberton;
-  }
-
-  static isHolbertonClass(obj) {
-    return obj instanceof HolbertonClass;
-  }
-
-  static displayStudents(arr) {
-    if (Array.isArray(arr)) {
-      arr.forEach((student) => {
-        if (StudentHolberton.isStudentHolberton(student)) {
-          console.log(student.fullStudentDescription);
-        }
-      });
-    }
-  }
-
-  static ofClassYear(arr, year) {
-    if (Array.isArray(arr)) {
-      return arr.filter((student) => {
-        if (StudentHolberton.isStudentHolberton(student)) {
-          return student.holbertonClass.year === year;
-        }
-      });
-    }
+    return `${self._firstName} ${self._lastName} - ${self._holbertonClass.year} - ${self._holbertonClass.location}`;
   }
 }
 
