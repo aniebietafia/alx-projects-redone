@@ -2,7 +2,7 @@ const getStudentsByLocation = (studentList, city) => {
   const filteredResult = [];
 
   studentList.filter((obj) => {
-    if (obj.location === city) {
+    if (obj.location.includes(city)) {
       filteredResult.push(obj);
     }
   });
