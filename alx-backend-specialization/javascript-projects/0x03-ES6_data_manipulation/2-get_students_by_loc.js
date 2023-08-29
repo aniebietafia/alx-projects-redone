@@ -1,4 +1,5 @@
 const getStudentsByLocation = (studentList, city) => {
+  if (!Array.isArray(studentList)) return [];
   const filteredResult = [];
 
   studentList.filter((obj) => {
