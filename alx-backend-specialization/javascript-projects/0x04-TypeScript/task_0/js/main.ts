@@ -29,4 +29,34 @@ const student_2: Student = {
   location: "Canada",
 };
 
-const studentsList = [student_1, student_2];
+const studentsList: Array<Student> = [student_1, student_2];
+
+const table: HTMLTableElement = document.createElement("table");
+const tableBody = document.createElement("tbody");
+const tableHead = document.createElement("thead");
+const tableHeadRow = document.createElement("tr");
+const tableHeadData1 = document.createElement("th");
+const tableHeadData2 = document.createElement("th");
+
+tableHeadData1.innerHTML = "First Name";
+tableHeadData2.innerHTML = "Location";
+
+tableHeadRow.appendChild(tableHeadData1);
+tableHeadRow.appendChild(tableHeadData2);
+tableHead.appendChild(tableHeadRow);
+table.appendChild(tableHead);
+
+studentsList.forEach((student) => {
+  const tableRow = document.createElement("tr");
+  const tableData1 = document.createElement("td");
+  const tableData2 = document.createElement("td");
+
+  tableData1.innerHTML = student.firstName;
+  tableData2.innerHTML = student.location;
+
+  tableRow.appendChild(tableData1);
+  tableRow.appendChild(tableData2);
+  tableBody.appendChild(tableRow);
+});
+
+table.appendChild(tableBody);
