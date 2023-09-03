@@ -1,3 +1,4 @@
+//  Task 1.0 - Build the Teacher interface
 /*
 Create a directory task_1 and copy these configuration files into this folder: package.json, tsconfig.json, webpack.config.js
 •	firstName(string) and lastName(string). These two attributes should only be modifiable when a Teacher is first initialized
@@ -16,6 +17,7 @@ interface Teacher {
   [propName: string]: any;
 }
 
+// Task 1.1 - Extending the Teacher class
 /* 
 Write an interface named Directors that extends Teacher. It requires an attribute named numberOfReports(number)
  */
