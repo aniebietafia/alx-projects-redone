@@ -7,34 +7,9 @@ Create a directory task_1 and copy these configuration files into this folder: p
 •	Add the possibility to add any attribute to the Object like contract(boolean) without specifying the name of the attribute
 */
 
-class Teacher {
-  public firstName: string;
-  public lastName: string;
-  public fullTimeEmployee: boolean;
-  public yearsOfExperience: number;
-  public location: string;
-  public contract: boolean;
-
-  constructor(
-    firstName: string,
-    lastName: string,
-    fullTimeEmployee: boolean,
-    yearsOfExperience: number,
-    location: string,
-    contract: boolean
-  ) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.fullTimeEmployee = fullTimeEmployee;
-    this.yearsOfExperience = yearsOfExperience;
-    this.location = location;
-    this.contract = contract;
-  }
-}
-
-interface TeacherInterface {
-  firstName: string;
-  lastName: string;
+interface Teacher {
+  readonly firstName: string;
+  readonly lastName: string;
   fullTimeEmployee: boolean;
   yearsOfExperience?: number;
   location: string;
