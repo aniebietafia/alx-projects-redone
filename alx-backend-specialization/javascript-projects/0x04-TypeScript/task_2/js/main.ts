@@ -1,3 +1,4 @@
+//  Task 2.1 - Creating interfaces and classes
 /*
 Create the DirectorInterface interface with the 3 expected methods:
 •	workFromHome() returning a string
@@ -67,5 +68,27 @@ export function createEmployee(salary: number | string): Director | Teacher {
     return new Teacher();
   } else {
     return new Director();
+  }
+}
+
+//  Task 2.2 - Creating functions specific to employees
+/*
+Write a function isDirector:
+•	it accepts employee as an argument
+•	it will be used as a type predicate and if the employee is a director
+Write a function executeWork:
+•	it accepts employee as an argument
+•	if the employee is a Director, it will call workDirectorTasks
+•	if the employee is a Teacher, it will call workTeacherTasks
+*/
+export function isDirector(employee: Director | Teacher): employee is Director {
+  return (employee as Director).workDirectorTasks !== undefined;
+}
+
+export function executeWork(employee: Director | Teacher): string {
+  if (isDirector(employee)) {
+    return employee.workDirectorTasks();
+  } else {
+    return employee.workTeacherTasks();
   }
 }
