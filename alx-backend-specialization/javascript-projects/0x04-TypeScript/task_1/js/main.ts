@@ -8,7 +8,7 @@ Create a directory task_1 and copy these configuration files into this folder: p
 •	Add the possibility to add any attribute to the Object like contract(boolean) without specifying the name of the attribute
 */
 
-interface Teacher {
+export interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
   fullTimeEmployee: boolean;
@@ -22,7 +22,7 @@ interface Teacher {
 Write an interface named Directors that extends Teacher. It requires an attribute named numberOfReports(number)
  */
 
-interface Directors extends Teacher {
+export interface Directors extends Teacher {
   numberOfReports: number;
 }
 
@@ -35,7 +35,7 @@ Write a function printTeacher:
 Write an interface for the function named printTeacherFunction
 */
 
-interface printTeacherFunction {
+export interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
