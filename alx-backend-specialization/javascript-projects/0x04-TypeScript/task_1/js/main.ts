@@ -39,8 +39,13 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
+// Method 1
 export const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
-  const firstLetterOfFirstName = firstName.slice(0, 1).toUpperCase();
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
 
+// Method 2
+export const printTeacher2: printTeacherFunction = (firstName: string, lastName: string): string => {
+  const firstLetterOfFirstName = firstName.slice(0, 1).toUpperCase();
   return `${firstLetterOfFirstName}. ${lastName}`;
 };
