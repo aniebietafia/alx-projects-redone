@@ -15,3 +15,11 @@ interface Teacher {
   location: string;
   [propName: string]: any;
 }
+
+/* 
+Write an interface named Directors that extends Teacher. It requires an attribute named numberOfReports(number)
+ */
+
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
