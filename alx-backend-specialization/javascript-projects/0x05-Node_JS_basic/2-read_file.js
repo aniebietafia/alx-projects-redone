@@ -7,3 +7,33 @@ Using the database database.csv (provided in project description), create a func
 •	It should log the number of students in each field, and the list with the following format: Number of students in FIELD: 6. List: LIST_OF_FIRSTNAMES
 •	CSV file can contain empty lines (at the end) - and they are not a valid student!
 */
+
+import fs from "fs";
+
+export default function countStudents(path) {
+  try {
+    const data = fs.readFileSync(path, "utf8");
+    const lines = data.split("\n");
+    let count = 0;
+    const fields = {};
+    const fieldsList = [];
+    for (const line of lines) {
+      if (line !== "") {
+        count += 1;
+        const student = line.split(",");
+        if (!fields[student[3]]) {
+          fields[student[3]] = [];
+          fieldsList.push(student[3]);
+        }
+        fields[student[3]].push(student[0]);
+      }
+    }
+    console.log(`Number of students: ${count}`);
+    for (const field of fieldsList) {
+      const list = fields[field];
+      console.log(`Number of students in ${field}: ${list.length}. List: ${list.join(", ")}`);
+    }
+  } catch (err) {
+    throw new Error("Cannot load the database");
+  }
+}
