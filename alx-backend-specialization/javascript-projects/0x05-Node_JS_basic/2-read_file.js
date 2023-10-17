@@ -12,28 +12,28 @@ import fs from "fs";
 
 export default function countStudents(path) {
   try {
-    const data = fs.readFileSync(path, "utf8");
+    const data = fs.readFileSync(path, "utf-8");
     const lines = data.split("\n");
     let count = 0;
     const fields = {};
-    const fieldsList = [];
+    const fieldList = [];
     for (const line of lines) {
-      if (line !== "") {
+      if (line !== "" && line !== lines[0]) {
         count += 1;
         const student = line.split(",");
         if (!fields[student[3]]) {
           fields[student[3]] = [];
-          fieldsList.push(student[3]);
+          fieldList.push(student[3]);
         }
         fields[student[3]].push(student[0]);
       }
     }
-    console.log(`Number of students: ${count}`);
-    for (const field of fieldsList) {
+    console.log(`NUMBER_OF_STUDENTS: ${count}`);
+    for (const field of fieldList) {
       const list = fields[field];
       console.log(`Number of students in ${field}: ${list.length}. List: ${list.join(", ")}`);
     }
-  } catch (err) {
-    throw new Error("Cannot load the database");
+  } catch (error) {
+    console.log("Cannot load the database.");
   }
 }
