@@ -1,22 +1,24 @@
-const pascalTriangle = function (n) {
-  if (n <= 0) return [];
+function pascalTriangle(num) {
+    if (num === 1) return [1];
+    if (num < 1) return null;
 
-  const triangle = [];
+    const triangle = []
 
-  for (let i = 0; i < n; i++) {
-    const row = [];
-    for (let j = 0; j <= i; j++) {
-      if (j === 0 || j === i) {
-        row.push(1);
-      } else {
-        const prevRow = triangle[i - 1];
-        const sum = prevRow[j - 1] + prevRow[j];
-        row.push(sum);
-      }
+    for (let p1 = 0; p1 < num; p1++){
+        const row = []
+        for (let p2 = 0; p2 <= p1; p2++){
+            if (p2 === 0 || p2 === p1){
+                row.push(1)
+            } else {
+                const prevRow = triangle[p1 - 1]
+                const sum = prevRow[p2 - 1] + prevRow[p2]
+                row.push(sum)
+            }
+        }
+        triangle.push(row)
     }
-    triangle.push(row);
-  }
-  return triangle;
-};
+    return triangle
+}
 
-console.log(pascalTriangle(5));
+const result = pascalTriangle(10)
+console.log(result)
