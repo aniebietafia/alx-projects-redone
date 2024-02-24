@@ -1,4 +1,4 @@
 # ALX Tasks Redone
-Projects to practice problem-solving
+Projects done in the ALX SE programme to practice problem-solving
 
 ## Programming Languages used
