@@ -1,0 +1,50 @@
+NodeJs: File System Read
+Your company has recently started working extensively with the file system. As
+the NodeJs Developer in your company, you have been tasked to write a script
+that reads JSON files effectively. Your job is to write a script with a function
+that takes care of reading the file from the file system, handle errors if any,
+and return the data in a JSON format.
+
+Functionality
+The script should implement the following functionalities:
+
+- Read JSON File: The function should accept the fully resolved file path as the
+ input and return a Promise that resolves with the parsed JSON data contained in
+  the file.
+
+- Error Handling: The following errors should be handled and appropriately
+returned:
+    - File does not exist: If the file does not exist, reject the function with
+    an Error object with the message 'File does not exist.'
+
+    - The passed File is a directory. If the path specified to the function is a
+     directory, reject the Function with an Error object with the message 'Path
+     is a directory.'
+
+    - Contents of the file are not valid JSON: If the data contained in the file
+     is not a valid JSON, reject the function with an Error object with the
+     message: 'JSON invalid.'
+
+Note: A test JSON file named data.json is present in the root directory of the
+question to perform read operations.
+
+Function Description:
+- The function should take the fully resolved path to the file as input and
+return a Promise that resolves with a valid JSON containing the file contents.
+
+- The file index.js should contain the function, and the function should be the
+default export of the file.
+
+const main = function() {
+    ...
+};
+
+module.exports = main;
+
+Software Instructions
+The question(s) requires Node 18.15.0 LTS or above
+
+Git Instructions
+npm start
+npm test
+npm install

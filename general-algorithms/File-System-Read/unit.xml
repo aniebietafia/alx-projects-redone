@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.043" tests="5" failures="5">
+  <testsuite name="Root Suite" timestamp="2024-02-09T11:23:44" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="file_system_read_basics" timestamp="2024-02-09T11:23:44" tests="5" file="C:\Users\leebo\Desktop\alx-projects-redone\general-algorithms\File-System-Read\test\index.spec.js" time="2.035" failures="5">
+    <testcase name="file_system_read_basics should read the file and return a JSON from the file system" time="0.001" classname="should read the file and return a JSON from the file system">
+      <failure message="Cannot read properties of undefined (reading &apos;then&apos;)" type="TypeError"><![CDATA[TypeError: Cannot read properties of undefined (reading 'then')
+    at Context.<anonymous> (test\index.spec.js:21:33)
+    at process.processImmediate (node:internal/timers:478:21)]]></failure>
+    </testcase>
+    <testcase name="file_system_read_basics should read the random generated file from the FS" time="2.010" classname="should read the random generated file from the FS">
+      <failure message="Timeout of 2000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (C:\Users\leebo\Desktop\alx-projects-redone\general-algorithms\File-System-Read\test\index.spec.js)" type="Error"><![CDATA[Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (C:\Users\leebo\Desktop\alx-projects-redone\general-algorithms\File-System-Read\test\index.spec.js)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)]]></failure>
+    </testcase>
+    <testcase name="file_system_read_basics should return a JSON invalid error message" time="0.001" classname="should return a JSON invalid error message">
+      <failure message="Cannot read properties of undefined (reading &apos;catch&apos;)" type="TypeError"><![CDATA[TypeError: Cannot read properties of undefined (reading 'catch')
+    at Context.<anonymous> (test\index.spec.js:38:43)
+    at process.processImmediate (node:internal/timers:478:21)]]></failure>
+    </testcase>
+    <testcase name="file_system_read_basics should return a File Missing error message" time="0.001" classname="should return a File Missing error message">
+      <failure message="Cannot read properties of undefined (reading &apos;catch&apos;)" type="TypeError"><![CDATA[TypeError: Cannot read properties of undefined (reading 'catch')
+    at Context.<anonymous> (test\index.spec.js:45:40)
+    at process.processImmediate (node:internal/timers:478:21)]]></failure>
+    </testcase>
+    <testcase name="file_system_read_basics should return a Path is a Directory message" time="0.000" classname="should return a Path is a Directory message">
+      <failure message="Cannot read properties of undefined (reading &apos;catch&apos;)" type="TypeError"><![CDATA[TypeError: Cannot read properties of undefined (reading 'catch')
+    at Context.<anonymous> (test\index.spec.js:52:28)
+    at process.processImmediate (node:internal/timers:478:21)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.590" tests="6" failures="6">
+  <testsuite name="Root Suite" timestamp="2024-02-09T12:31:30" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="tiny_og_scraper" timestamp="2024-02-09T12:31:30" tests="6" file="C:\Users\leebo\Desktop\alx-projects-redone\general-algorithms\Simple-Open-Graph-Scraper\test\index.spec.js" time="0.018" failures="6">
+    <testcase name="tiny_og_scraper Should emit the scrapeStarted event once the processing starts" time="0.001" classname="Should emit the scrapeStarted event once the processing starts">
+      <failure message="TinyScraper is not a constructor" type="TypeError"><![CDATA[TypeError: TinyScraper is not a constructor
+    at Context.<anonymous> (test\index.spec.js:20:15)
+    at process.processImmediate (node:internal/timers:478:21)]]></failure>
+    </testcase>
+    <testcase name="tiny_og_scraper Should emit an error event if the url is invalid" time="0.001" classname="Should emit an error event if the url is invalid">
+      <failure message="TinyScraper is not a constructor" type="TypeError"><![CDATA[TypeError: TinyScraper is not a constructor
+    at Context.<anonymous> (test\index.spec.js:28:15)
+    at process.processImmediate (node:internal/timers:478:21)]]></failure>
+    </testcase>
+    <testcase name="tiny_og_scraper Should emit the scrapeSuccess event once the data is parsed" time="0.001" classname="Should emit the scrapeSuccess event once the data is parsed">
+      <failure message="TinyScraper is not a constructor" type="TypeError"><![CDATA[TypeError: TinyScraper is not a constructor
+    at Context.<anonymous> (test\index.spec.js:35:15)
+    at process.processImmediate (node:internal/timers:478:21)]]></failure>
+    </testcase>
+    <testcase name="tiny_og_scraper Should convert the og tags to valid JSON-1" time="0.000" classname="Should convert the og tags to valid JSON-1">
+      <failure message="TinyScraper is not a constructor" type="TypeError"><![CDATA[TypeError: TinyScraper is not a constructor
+    at Context.<anonymous> (test\index.spec.js:42:15)
+    at process.processImmediate (node:internal/timers:478:21)]]></failure>
+    </testcase>
+    <testcase name="tiny_og_scraper Should convert the og tags to valid JSON-2" time="0.001" classname="Should convert the og tags to valid JSON-2">
+      <failure message="TinyScraper is not a constructor" type="TypeError"><![CDATA[TypeError: TinyScraper is not a constructor
+    at Context.<anonymous> (test\index.spec.js:56:15)
+    at process.processImmediate (node:internal/timers:478:21)]]></failure>
+    </testcase>
+    <testcase name="tiny_og_scraper Should throw a timeout error event if the process does not complete in the timeout period" time="0.000" classname="Should throw a timeout error event if the process does not complete in the timeout period">
+      <failure message="TinyScraper is not a constructor" type="TypeError"><![CDATA[TypeError: TinyScraper is not a constructor
+    at Context.<anonymous> (test\index.spec.js:70:15)
+    at process.processImmediate (node:internal/timers:478:21)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

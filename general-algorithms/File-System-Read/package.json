@@ -1,0 +1,27 @@
+{
+  "name": "fs-basic-hackerrank",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "prestart": "npm install",
+    "pretest": "npm install",
+    "test": "cross-env PORT=8001 ./node_modules/.bin/mocha --reporter mocha-multi-reporters --reporter-options configFile=config.json --exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bluebird": "^3.7.2",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "mocha-junit-reporter": "^2.2.0",
+    "mocha-multi-reporters": "^1.5.1",
+    "mock-fs": "^5.2.0",
+    "uuid": "^9.0.0"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
