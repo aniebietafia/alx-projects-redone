@@ -13,8 +13,8 @@ const getListStudents = () => {
 const studentLists = (id, firstName, location) => {
     if (
         typeof Number(id) !== "number" ||
-        (typeof firstName !== "string" &&
-        typeof location !== "string")
+        (typeof firstName !== "string" && typeof Number(firstName) === "number") ||
+        (typeof location !== "string" && typeof Number(location) === "number")
         ) {
         throw new Error("Invalid inputs");
     }
