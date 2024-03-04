@@ -33,8 +33,8 @@ class Teacher implements TeacherInterface {
 		return "Cannot have a break";
 	}
 
-	workDirectorTasks() {
-		return "Getting to director tasks";
+	workTeacherTasks() {
+		return "Getting to work.";
 	}
 }
 
@@ -49,17 +49,16 @@ export function createEmployee(salary: string | number): Teacher | Director {
 }
 
 
-const isDirector = (employee) => {
-	const director = new Director();
-	return director;
+const isDirector = (employee: DirectorInterface | TeacherInterface): "employee is Director" => {
+	return (employee as Director).workDirectorTasks !== undefined;
 }
 
-export const executeWork = (employee) => {
-	if (employee === "Director") {
-		const directorTasks = isDirector(employee).workDirectorTasks();
+export const executeWork = (employee: DirectorInterface | TeacherInterface): string => {
+	if (isDirector(employee)) {
+		const directorTasks = employee.workDirectorTasks();
 		return directorTasks;
 	} else {
-		const teacherTasks = new Teacher();
+		const teacherTasks = employee.workTeacherTasks();
 		return teacherTasks.workTeacherTasks();
 	}
 }
