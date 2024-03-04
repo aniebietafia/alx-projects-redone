@@ -37,3 +37,10 @@ class Teacher implements TeacherInterface {
 		return "Getting to director tasks";
 	}
 }
+
+function createEmployee(salary: string | number) {
+	if (typeof salary === "number" && salary < 500) {
+		const teacher = new Teacher();
+		return teacher;
+	}
+}
