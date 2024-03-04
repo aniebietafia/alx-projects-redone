@@ -42,5 +42,8 @@ function createEmployee(salary: string | number) {
 	if (typeof salary === "number" && salary < 500) {
 		const teacher = new Teacher();
 		return teacher;
+	} else {
+		const director = new Director();
+		return director;
 	}
 }
