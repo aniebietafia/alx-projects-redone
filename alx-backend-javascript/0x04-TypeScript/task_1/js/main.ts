@@ -1,3 +1,4 @@
+// creating Teacher interface
 interface Teacher {
 	readonly firstName: string;
 	readonly lastName: string;
@@ -7,6 +8,7 @@ interface Teacher {
 	[key: string]: boolean;
 }
 
+// using the teacher interface
 const teacher3: Teacher = {
   firstName: 'John',
   fullTimeEmployee: false,
@@ -17,10 +19,12 @@ const teacher3: Teacher = {
 
 console.log(teacher3);
 
+// creating directors interface extending from teacher interface
 interface Directors extends Teacher {
 	numberOfReports: number;
 }
 
+// using the directors interface
 const director1: Directors = {
   firstName: 'John',
   lastName: 'Doe',
@@ -30,10 +34,34 @@ const director1: Directors = {
 };
 console.log(director1);
 
+// creating interface to print function
 interface printTeacherFunction {
 	printTeacher: (firstName: string, lastName: string) => string;
 }
 
 function printTeacher: printTeacherFunction(firstName: string, lastName: string): string {
 	return `${firstName.charAt(0)}. ${lastName}`
+}
+
+// writing a class
+interface Student {
+	firstName: string;
+	lastName: string;
+	workOnHomework: () => string;
+	displayName: () => string;
+}
+
+class StudentClass {
+	constructor(firstName: string, lastName: string) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+
+	workOnHomework() {
+		return "Currently working";
+	}
+
+	displayName() {
+		return `${this.firstName}`
+	}
 }
