@@ -47,3 +47,19 @@ export default function createEmployee(salary: string | number): Teacher | Direc
 		return director;
 	}
 }
+
+
+const isDirector = (employee) => {
+	const director = new Director();
+	return director;
+}
+
+const executeWork = (employee) => {
+	if (employee === "Director") {
+		const directorTasks = isDirector(employee).workDirectorTasks();
+		return directorTasks;
+	} else {
+		const teacherTasks = new Teacher();
+		return teacherTasks.workTeacherTasks();
+	}
+}
