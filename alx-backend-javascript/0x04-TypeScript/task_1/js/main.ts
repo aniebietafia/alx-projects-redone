@@ -51,7 +51,7 @@ interface Student {
 	displayName: () => string;
 }
 
-class StudentClass {
+class StudentClass implements Student {
 	constructor(firstName: string, lastName: string) {
 		this.firstName = firstName;
 		this.lastName = lastName;
