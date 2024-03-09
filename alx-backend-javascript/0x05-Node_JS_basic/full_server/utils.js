@@ -11,15 +11,20 @@ const readDatabase = async (filePath) => {
 
 		const StudentList = students.length > 0 ? students.slice(1) : 0;
 
-		console.log(StudentList);
+		return StudentList.map((student) => {
+			return { firstName: student[0]};
+		})
 
-		for (const student of students) {
-			console.log(student);
-		}
+		// for (const student of StudentList) {
+		// 	console.log(student);
+		// }
 
 	} catch (e) {
 		console.log(e.message);
 	}
 }
 
-readDatabase("./database.csv")
+const result = readDatabase("./database.csv")
+result.then((data) => {
+	console.log(data);
+})
