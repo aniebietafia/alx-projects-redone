@@ -22,7 +22,7 @@ const readDatabase = async (filePath) => {
 	}
 }
 
-const result = readDatabase("./database.csv")
-result.then((data) => {
-	console.log(data);
-})
+// const result = readDatabase("./database.csv")
+// result.then((data) => {
+// 	console.log(data);
+// })
