@@ -8,7 +8,14 @@ const readDatabase = async (filePath) => {
 		students = students.map(function(student){
 			return student.split(",");
 		});
-		console.log(students);
+
+		const StudentList = students > 0 ? students.slice(1) : 0;
+
+		console.log(StudentList);
+
+		for (const student of students) {
+			console.log(student);
+		}
 
 	} catch (e) {
 		console.log(e.message);
