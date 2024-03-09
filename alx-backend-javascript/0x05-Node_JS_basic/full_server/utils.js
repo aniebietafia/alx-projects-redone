@@ -9,7 +9,7 @@ const readDatabase = async (filePath) => {
 			return student.split(",");
 		});
 
-		const StudentList = students > 0 ? students.slice(1) : 0;
+		const StudentList = students.length > 0 ? students.slice(1) : 0;
 
 		console.log(StudentList);
 
