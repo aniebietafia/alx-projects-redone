@@ -3,21 +3,19 @@ import fs from "node:fs/promises";
 const readDatabase = async (filePath) => {
 	// code here
 	try {
-		const fileContents = await fs.readFile(filePath, "utf8");
-		let students = fileContents.split("\n").map((line) => line.trim());
-		students = students.map(function(student){
+		const database = await fs.readFile(filePath, "utf8");
+		let fileContents = database.split("\n").map((line) => line.trim());
+		fileContents = fileContents.map(function(student){
 			return student.split(",");
 		});
 
-		const StudentList = students.length > 0 ? students.slice(1) : 0;
+		const students = fileContents.length > 0 ? fileContents.slice(1) : 0;
 
-		return StudentList.map((student) => {
+		const StudentList = students.map((student) => {
 			return { firstName: student[0]};
-		})
+		});
 
-		// for (const student of StudentList) {
-		// 	console.log(student);
-		// }
+		return StudentList;
 
 	} catch (e) {
 		console.log(e.message);
