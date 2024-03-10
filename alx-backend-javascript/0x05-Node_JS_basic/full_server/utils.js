@@ -11,16 +11,16 @@ const readDatabase = async (filePath) => {
 
 		const students = fileContents.length > 0 ? fileContents.slice(1) : 0;
 
-		console.log(students);
-
 		const studentList = {};
 
 		for (const student of students) {
 			studentList[student[3]] = [];
 
-			// if (Object.keys(studentList).includes(student[3])) {
-			// 	studentList.student[3].push(student);
-			// }
+			for (const key in studentList) {
+				if (key === "CS") {
+					studentList[key].push(student[0])
+				}
+			}
 		}
 
 		console.log(studentList);
