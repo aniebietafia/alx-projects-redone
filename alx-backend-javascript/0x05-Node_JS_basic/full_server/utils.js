@@ -33,8 +33,3 @@ const readDatabase = async (filePath) => {
 }
 
 export default readDatabase;
-
-const result = readDatabase("./database.csv")
-result.then((data) => {
-	console.log(data);
-})
