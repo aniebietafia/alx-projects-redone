@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 const countStudents = async (filePath) => {
 	try {
 		const fileContents = await fs.readFile(filePath, "utf8");
-		let students = fileContents.split("\n");
+		let students = fileContents.split("\n").map((line) => line.trim());
 		students = students.map((student) => student.split(","));
 
 		const NUMBER_OF_STUDENTS = students.length > 0 ? students.slice(1).length : 0;
