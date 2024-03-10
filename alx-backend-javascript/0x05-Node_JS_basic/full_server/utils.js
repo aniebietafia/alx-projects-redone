@@ -25,9 +25,7 @@ const readDatabase = async (filePath) => {
 			})
 		}
 
-		console.log(studentList);
-
-		// return StudentList;
+		return studentList;
 
 	} catch (e) {
 		console.log(e.message);
