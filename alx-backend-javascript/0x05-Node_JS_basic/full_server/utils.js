@@ -15,12 +15,14 @@ const readDatabase = async (filePath) => {
 
 		for (const student of students) {
 			studentList[student[3]] = [];
+		}
 
-			for (const key in studentList) {
+		for (const key in studentList) {
+			students.forEach((student) => {
 				if (student[3] == key) {
 					studentList[key].push(student[0]);
 				}
-			}
+			})
 		}
 
 		console.log(studentList);
