@@ -11,11 +11,13 @@ const readDatabase = async (filePath) => {
 
 		const students = fileContents.length > 0 ? fileContents.slice(1) : 0;
 
-		const StudentList = students.map((student) => {
-			return { firstName: student[0]};
-		});
+		console.log(students);
 
-		return StudentList;
+		// const StudentList = students.map((student) => {
+		// 	return { firstName: student[0]};
+		// });
+
+		// return StudentList;
 
 	} catch (e) {
 		console.log(e.message);
@@ -24,7 +26,7 @@ const readDatabase = async (filePath) => {
 
 export default readDatabase;
 
-// const result = readDatabase("./database.csv")
-// result.then((data) => {
-// 	console.log(data);
-// })
+const result = readDatabase("./database.csv")
+result.then((data) => {
+	console.log(data);
+})
