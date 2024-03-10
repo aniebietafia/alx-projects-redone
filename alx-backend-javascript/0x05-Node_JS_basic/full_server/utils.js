@@ -17,7 +17,7 @@ const readDatabase = async (filePath) => {
 			studentList[student[3]] = [];
 
 			for (const key in studentList) {
-				if (key === "CS") {
+				if (key === "CS" || student[3] === "CS") {
 					studentList[key].push(student[0])
 				}
 			}
