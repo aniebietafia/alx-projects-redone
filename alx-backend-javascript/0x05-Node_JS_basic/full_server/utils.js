@@ -18,9 +18,9 @@ const readDatabase = async (filePath) => {
 		for (const student of students) {
 			studentList[student[3]] = [];
 
-			if (Object.keys(studentList).includes(student[3])) {
-				studentList.student[3].push(student);
-			}
+			// if (Object.keys(studentList).includes(student[3])) {
+			// 	studentList.student[3].push(student);
+			// }
 		}
 
 		console.log(studentList);
