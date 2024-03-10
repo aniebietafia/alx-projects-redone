@@ -17,17 +17,15 @@ const readDatabase = async (filePath) => {
 			studentList[student[3]] = [];
 
 			for (const key in studentList) {
-				if (key === "CS" || student[3] === "CS") {
-					studentList[key].push(student[0])
+				if (student[3] == key) {
+					studentList[key].push(student[0]);
+				} else if (student[3] == key) {
+					studentList[key].push(student[0]);
 				}
 			}
 		}
 
 		console.log(studentList);
-
-		// const StudentList = students.map((student) => {
-		// 	return { firstName: student[0]};
-		// });
 
 		// return StudentList;
 
