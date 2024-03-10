@@ -13,6 +13,14 @@ const readDatabase = async (filePath) => {
 
 		console.log(students);
 
+		const studentList = {};
+
+		for (const student of students) {
+			studentList[student[3]] = [];
+		}
+
+		console.log(studentList);
+
 		// const StudentList = students.map((student) => {
 		// 	return { firstName: student[0]};
 		// });
