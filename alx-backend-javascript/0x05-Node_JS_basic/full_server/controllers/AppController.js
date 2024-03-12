@@ -1,6 +1,7 @@
-export class AppController {
-	static getHomepage(req, res) {
-		res.writeHead(200);
-		res.write("Hello Holberton School!");
+class AppController {
+	static getHomepage(request, response) {
+		response.send(200, "Hello Holberton School!");
 	}
 }
+
+export default AppController;
