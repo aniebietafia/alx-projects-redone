@@ -11,9 +11,9 @@ class StudentsController {
 			for (const key in students) {
 				result.push(`Number of students in ${key}: ${students[key].length}. List: ${students[key].join(", ")}`)
 			}
-			res.send(200, result.join("\n"));
+			res.status(200).send(result.join("\n"));
 		} catch (e) {
-			res.send(500, "Cannot load the database.");
+			res.status(500).send("Cannot load the database.");
 		}
 	}
 
@@ -21,7 +21,7 @@ class StudentsController {
 		try {
 			const { major } = req.params;
 
-			if (major !== "CS" || major !== "SWE") {
+			if (major !== "CS" && major !== "SWE") {
 				throw new Error("Major parameter must be CS or SWE");
 			}
 
@@ -39,10 +39,10 @@ class StudentsController {
 				}
 			}
 
-			res.send(result.join(', '));
+			res.status(200).send(result.join(', '));
 
 		} catch (e) {
-			res.send(500, e.message);
+			res.status(500).send(e.message);
 		}
 	}
 }
