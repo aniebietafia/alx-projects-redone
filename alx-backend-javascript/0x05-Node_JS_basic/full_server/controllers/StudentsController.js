@@ -1,6 +1,6 @@
 import readDatabase from "../utils.js";
 
-export class StudentsController {
+class StudentsController {
 	static async getAllStudents(req, res) {
 		try {
 			const students = await readDatabase("./database.csv");
@@ -40,11 +40,11 @@ export class StudentsController {
 			}
 
 			res.send(result.join(', '));
-			
+
 		} catch (e) {
 			res.send(500, e.message);
 		}
 	}
 }
 
-StudentsController.getAllStudents();
+export default StudentsController;
